@@ -1,7 +1,7 @@
 FROM golang:latest
 
-COPY ./ /go/src/the_brink
+COPY ./ /go/src/goChess
 
-RUN chmod +x /go/src/the_brink/entrypoint.sh
+RUN chmod +x /go/src/goChess/entrypoint.sh
 
-ENTRYPOINT /go/src/the_brink/entrypoint.sh
+ENTRYPOINT /go/src/goChess/entrypoint.sh

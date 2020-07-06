@@ -1,5 +1,5 @@
 #!/bin/sh
 
-docker build . --tag goChess
+docker build . --tag gochess
 
-docker run -ti goChess
+docker run -ti gochess

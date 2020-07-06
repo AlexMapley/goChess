@@ -26,6 +26,7 @@ func NewMapConsole() Console {
 func DisplayConsole() {
 
 	console := Console{}
+	Tiles := Tiles{}
 
 	// Open keyboard
 	if err := keyboard.Open(); err != nil {
@@ -43,14 +44,14 @@ func DisplayConsole() {
 		terminal := ""
 
 		// Print from top left to bottom right
-		for y := gameWorld.YMax - 1; y >= 0 ; y-- {
+		for y := 16 - 1; y >= 0 ; y-- {
 			line := []rune{}
-			for x := 0; x < gameWorld.XMax; x++ {
-				tile := world.Tile{
+			for x := 0; x < 16; x++ {
+				tile := Tile{
 					X: x,
 					Y: y,
 				}
-				line = append(line, gameWorld.Tiles[tile])
+				line = append(line, Tiles[tile])
 			}
 			terminal += string(line) + "\n"
 		}

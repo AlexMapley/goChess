@@ -11,5 +11,5 @@ func main(){
 
 	console := Console{}
 	
-	console.DisplayMapConsole()
+	console.DisplayConsole()
 }

@@ -6,10 +6,11 @@ import (
 
 func main(){
 
-	board := CreateBoard()
+	board := CreateBoard(16,16)
 	fmt.Println("Chess")
 
-	console := Console{}
+	// console := Console{}
 	
-	console.DisplayConsole()
+	// console.
+	DisplayConsole()
 }

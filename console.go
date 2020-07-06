@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 
 	"github.com/fatih/color"
 	"github.com/eiannone/keyboard"
@@ -26,7 +27,7 @@ func NewMapConsole() Console {
 func DisplayConsole() {
 
 	console := Console{}
-	Tiles := Tiles{}
+	var tiles map[Tile]rune
 
 	// Open keyboard
 	if err := keyboard.Open(); err != nil {
@@ -51,7 +52,7 @@ func DisplayConsole() {
 					X: x,
 					Y: y,
 				}
-				line = append(line, Tiles[tile])
+				line = append(line, tiles[tile])
 			}
 			terminal += string(line) + "\n"
 		}

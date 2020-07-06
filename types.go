@@ -6,3 +6,7 @@ type Tile struct {
 	X int
 	Y int
 }
+
+type Console struct {
+	Actions []string
+}

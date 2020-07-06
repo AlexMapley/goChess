@@ -27,7 +27,7 @@ func NewMapConsole() Console {
 func DisplayConsole() {
 
 	console := Console{}
-	var tiles map[Tile]rune
+	board := CreateBoard(16,16)
 
 	// Open keyboard
 	if err := keyboard.Open(); err != nil {
@@ -52,7 +52,7 @@ func DisplayConsole() {
 					X: x,
 					Y: y,
 				}
-				line = append(line, tiles[tile])
+				line = append(line, board[tile])
 			}
 			terminal += string(line) + "\n"
 		}

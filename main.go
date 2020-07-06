@@ -5,6 +5,8 @@ import (
 )
 
 func main(){
+
+	board := CreateBoard()
 	fmt.Println("Chess")
-	
+
 }
